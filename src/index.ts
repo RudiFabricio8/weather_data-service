@@ -17,7 +17,7 @@ interface WeatherResponse {
   _tempRounded?: number;
 }
 
-app.get('/current', async (req: Request, res: Response<WeatherResponse | { error: string }>): Promise<void> => {
+app.get('/api/weather/current', async (req: Request, res: Response<WeatherResponse | { error: string }>): Promise<void> => {
   try {
     const { city } = req.query;
     
